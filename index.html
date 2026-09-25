@@ -15,72 +15,81 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/profile.png">
 
-  <title>Nayan Deva K V | Data Science & ML Engineer</title>
+  <title>Nayan Deva K V | Portfolio</title>
 
-  <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+  <!-- Google Fonts: Space Grotesk (Editorial Tech Display) & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* -------------------------------------------------------------
-       CSS Custom Properties (Dark / Light Theme System)
-    -------------------------------------------------------------- */
+    /* =============================================================
+       Theme System: Neo-Aurora Sunset & Prismatic Obsidian
+    ============================================================== */
     :root {
-      --bg: #090d16;
-      --bg-grid: rgba(255, 255, 255, 0.03);
-      --surface: rgba(16, 23, 38, 0.72);
-      --surface-solid: #11192b;
-      --surface-border: rgba(255, 255, 255, 0.09);
-      --text: #f3f4f6;
+      /* Dark Theme (Default): Deep Obsidian with Warm Sunset & Violet Aurora */
+      --bg: #0c0d12;
+      --bg-elevated: #12141c;
+      --surface: rgba(18, 20, 29, 0.72);
+      --surface-solid: #151824;
+      --surface-border: rgba(255, 255, 255, 0.08);
+      --surface-hover: rgba(28, 32, 48, 0.85);
+
+      --text: #f8fafc;
       --text-muted: #94a3b8;
       --text-dim: #64748b;
       --line: rgba(255, 255, 255, 0.08);
 
-      --accent: #10b981;
-      --accent-rgb: 16, 185, 129;
-      --accent-glow: rgba(16, 185, 129, 0.28);
-      --accent-soft: rgba(16, 185, 129, 0.12);
-      --accent-hover: #059669;
+      /* Accents: Radiant Coral-Sunset & Electric Violet */
+      --accent-coral: #ff6b57;
+      --accent-coral-glow: rgba(255, 107, 87, 0.3);
+      --accent-amber: #f59e0b;
+      --accent-violet: #8b5cf6;
+      --accent-violet-glow: rgba(139, 92, 246, 0.3);
+      --accent-cyan: #38bdf8;
+      --accent-emerald: #10b981;
 
-      --cyan: #06b6d4;
-      --cyan-soft: rgba(6, 182, 212, 0.12);
-      --indigo: #6366f1;
-      --indigo-soft: rgba(99, 102, 241, 0.12);
+      --primary-gradient: linear-gradient(135deg, #ff6b57 0%, #ff8f3d 50%, #f59e0b 100%);
+      --aurora-gradient: linear-gradient(135deg, rgba(255, 107, 87, 0.15) 0%, rgba(139, 92, 246, 0.12) 50%, rgba(56, 189, 248, 0.1) 100%);
+      --border-gradient: linear-gradient(135deg, #ff6b57, #8b5cf6, #38bdf8);
 
-      --card-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.55);
-      --nav-bg: rgba(9, 13, 22, 0.82);
+      --card-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.65);
+      --nav-bg: rgba(12, 13, 18, 0.85);
     }
 
     [data-theme="light"] {
-      --bg: #f8fafc;
-      --bg-grid: rgba(0, 0, 0, 0.03);
-      --surface: rgba(255, 255, 255, 0.88);
+      /* Light Theme: Warm Editorial Alabaster & Tuscan Ember */
+      --bg: #faf9f6;
+      --bg-elevated: #f2efe9;
+      --surface: rgba(255, 255, 255, 0.85);
       --surface-solid: #ffffff;
       --surface-border: rgba(0, 0, 0, 0.08);
-      --text: #0f172a;
-      --text-muted: #475569;
-      --text-dim: #94a3b8;
-      --line: rgba(0, 0, 0, 0.08);
+      --surface-hover: #ffffff;
 
-      --accent: #059669;
-      --accent-rgb: 5, 150, 105;
-      --accent-glow: rgba(5, 150, 105, 0.2);
-      --accent-soft: rgba(5, 150, 105, 0.1);
-      --accent-hover: #047857;
+      --text: #14151b;
+      --text-muted: #4b5563;
+      --text-dim: #9ca3af;
+      --line: rgba(0, 0, 0, 0.07);
 
-      --cyan: #0284c7;
-      --cyan-soft: rgba(2, 132, 199, 0.1);
-      --indigo: #4f46e5;
-      --indigo-soft: rgba(79, 70, 229, 0.1);
+      --accent-coral: #e04f38;
+      --accent-coral-glow: rgba(224, 79, 56, 0.2);
+      --accent-amber: #d97706;
+      --accent-violet: #7c3aed;
+      --accent-violet-glow: rgba(124, 58, 237, 0.2);
+      --accent-cyan: #0284c7;
+      --accent-emerald: #059669;
+
+      --primary-gradient: linear-gradient(135deg, #e04f38 0%, #f97316 100%);
+      --aurora-gradient: linear-gradient(135deg, rgba(224, 79, 56, 0.08) 0%, rgba(124, 58, 237, 0.06) 50%, rgba(2, 132, 199, 0.06) 100%);
+      --border-gradient: linear-gradient(135deg, #e04f38, #7c3aed, #0284c7);
 
       --card-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.07);
-      --nav-bg: rgba(248, 250, 252, 0.85);
+      --nav-bg: rgba(250, 249, 246, 0.88);
     }
 
-    /* -------------------------------------------------------------
-       Base & Reset
-    -------------------------------------------------------------- */
+    /* =============================================================
+       Base Reset
+    ============================================================== */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -97,11 +106,8 @@
       color: var(--text);
       line-height: 1.65;
       overflow-x: hidden;
+      position: relative;
       transition: background 0.3s ease, color 0.3s ease;
-      background-image:
-        linear-gradient(to right, var(--bg-grid) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--bg-grid) 1px, transparent 1px);
-      background-size: 40px 40px;
     }
 
     a {
@@ -110,34 +116,88 @@
     }
 
     .container {
-      width: min(1140px, 91%);
+      width: min(1140px, 92%);
       margin: auto;
     }
 
-    /* -------------------------------------------------------------
-       Interactive Background Ambient Canvas
-    -------------------------------------------------------------- */
-    #hero-canvas {
-      position: absolute;
+    /* =============================================================
+       Interactive Ambient Aurora Light Background
+    ============================================================== */
+    .aurora-backdrop {
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
       z-index: 0;
-      opacity: 0.65;
+      overflow: hidden;
     }
 
-    /* -------------------------------------------------------------
-       Navigation Bar
-    -------------------------------------------------------------- */
+    .aurora-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.45;
+      transition: transform 0.5s ease-out;
+    }
+
+    .orb-1 {
+      top: -100px;
+      left: -80px;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, var(--accent-coral) 0%, transparent 70%);
+      animation: pulseOrb 12s infinite alternate ease-in-out;
+    }
+
+    .orb-2 {
+      top: 15%;
+      right: -100px;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, var(--accent-violet) 0%, transparent 70%);
+      animation: pulseOrb 14s infinite alternate-reverse ease-in-out;
+    }
+
+    .orb-3 {
+      bottom: 10%;
+      left: 20%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, var(--accent-amber) 0%, transparent 70%);
+      animation: pulseOrb 16s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulseOrb {
+      0% { transform: scale(1) translate(0, 0); }
+      50% { transform: scale(1.15) translate(30px, 20px); }
+      100% { transform: scale(0.95) translate(-20px, 40px); }
+    }
+
+    /* Subtle Architectural Grid Overlay */
+    .grid-overlay {
+      position: fixed;
+      inset: 0;
+      background-size: 55px 55px;
+      background-image:
+        linear-gradient(to right, var(--line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* =============================================================
+       Navbar: Sleek Floating Glass Ribbon
+    ============================================================== */
     nav {
       position: sticky;
       top: 0;
       z-index: 1000;
       background: var(--nav-bg);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--line);
       transition: background 0.3s ease;
     }
@@ -153,29 +213,30 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      font-weight: 800;
-      font-size: 1.15rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
       letter-spacing: -0.02em;
     }
 
     .brand-avatar {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
       object-fit: cover;
-      border: 2px solid var(--accent);
-      box-shadow: 0 0 12px var(--accent-glow);
-      transition: transform 0.3s ease;
+      border: 1.5px solid var(--accent-coral);
+      box-shadow: 0 0 16px var(--accent-coral-glow);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .brand:hover .brand-avatar {
-      transform: scale(1.1) rotate(5deg);
+      transform: scale(1.1) rotate(-4deg);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 28px;
       font-size: 0.92rem;
       font-weight: 600;
       color: var(--text-muted);
@@ -197,8 +258,8 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--accent);
-      transition: width 0.2s ease;
+      background: var(--primary-gradient);
+      transition: width 0.25s ease;
       border-radius: 2px;
     }
 
@@ -214,105 +275,143 @@
 
     .theme-toggle-btn {
       background: var(--surface);
-      border: 1px solid var(--line);
+      border: 1px solid var(--surface-border);
       color: var(--text);
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       transition: all 0.2s ease;
     }
 
     .theme-toggle-btn:hover {
       transform: scale(1.08);
-      border-color: var(--accent);
+      border-color: var(--accent-coral);
     }
 
     .nav-cv-btn {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      padding: 8px 16px;
+      gap: 8px;
+      background: var(--surface-solid);
+      color: var(--text);
+      border: 1px solid var(--surface-border);
+      padding: 9px 18px;
       border-radius: 999px;
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       font-weight: 700;
       transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-cv-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--primary-gradient);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      z-index: 0;
+    }
+
+    .nav-cv-btn:hover::before {
+      opacity: 1;
     }
 
     .nav-cv-btn:hover {
-      background: var(--accent);
       color: #ffffff;
+      border-color: transparent;
       transform: translateY(-2px);
-      box-shadow: 0 4px 14px var(--accent-glow);
+      box-shadow: 0 6px 18px var(--accent-coral-glow);
     }
 
-    /* -------------------------------------------------------------
-       Spotlight Hover Card System
-    -------------------------------------------------------------- */
-    .spotlight-card {
+    .nav-cv-btn span, .nav-cv-btn svg {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* =============================================================
+       Prismatic Spotlight Cards (Creative Hover Effect)
+    ============================================================== */
+    .prismatic-card {
       position: relative;
       background: var(--surface);
       border: 1px solid var(--surface-border);
-      border-radius: 24px;
+      border-radius: 26px;
       box-shadow: var(--card-shadow);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      overflow: hidden;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
                   border-color 0.28s ease,
                   box-shadow 0.28s ease;
+      overflow: hidden;
+      z-index: 1;
     }
 
-    .spotlight-card::before {
+    /* Subtle cursor glow spotlight */
+    .prismatic-card::before {
       content: "";
       position: absolute;
       inset: 0;
       background: radial-gradient(
-        400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(var(--accent-rgb), 0.16),
+        450px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 107, 87, 0.12),
         transparent 50%
       );
       opacity: 0;
-      transition: opacity 0.4s ease;
+      transition: opacity 0.35s ease;
       pointer-events: none;
       z-index: 1;
     }
 
-    .spotlight-card:hover {
-      border-color: rgba(var(--accent-rgb), 0.45);
-      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.3), 0 0 25px var(--accent-glow);
-      transform: translateY(-4px);
+    /* Prismatic animated border sweep on hover */
+    .prismatic-card::after {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      background: var(--border-gradient);
+      border-radius: inherit;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.35s ease;
     }
 
-    .spotlight-card:hover::before {
+    .prismatic-card:hover {
+      transform: translateY(-5px);
+      border-color: transparent;
+      box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.4), 0 0 25px var(--accent-coral-glow);
+    }
+
+    .prismatic-card:hover::before {
       opacity: 1;
     }
 
-    /* -------------------------------------------------------------
+    .prismatic-card:hover::after {
+      opacity: 0.85;
+    }
+
+    /* =============================================================
        Hero Section
-    -------------------------------------------------------------- */
+    ============================================================== */
     .hero {
       position: relative;
       min-height: 88vh;
       display: flex;
       align-items: center;
-      padding: 60px 0 90px;
+      padding: 65px 0 95px;
+      z-index: 1;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.25fr 0.85fr;
-      gap: 50px;
+      grid-template-columns: 1.22fr 0.88fr;
+      gap: 55px;
       align-items: center;
-      position: relative;
-      z-index: 1;
     }
 
     .hero-content {
@@ -323,69 +422,63 @@
     .status-badge {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
+      gap: 10px;
       width: fit-content;
-      background: var(--accent-soft);
-      color: var(--accent);
+      background: rgba(255, 107, 87, 0.1);
+      color: var(--accent-coral);
       font-size: 0.84rem;
       font-weight: 700;
-      padding: 6px 14px;
+      padding: 7px 16px;
       border-radius: 999px;
-      margin-bottom: 22px;
-      border: 1px solid var(--accent);
-      box-shadow: 0 0 15px var(--accent-glow);
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 107, 87, 0.25);
+      backdrop-filter: blur(10px);
     }
 
     .status-dot {
       width: 9px;
       height: 9px;
-      background-color: var(--accent);
+      background-color: var(--accent-coral);
       border-radius: 50%;
       display: inline-block;
-      box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0.7);
-      animation: pulse 2.2s infinite;
+      box-shadow: 0 0 0 0 rgba(255, 107, 87, 0.7);
+      animation: pulseCoral 2.4s infinite;
     }
 
-    @keyframes pulse {
-      0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0.7);
-      }
-      70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 9px rgba(var(--accent-rgb), 0);
-      }
-      100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0);
-      }
+    @keyframes pulseCoral {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 107, 87, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 9px rgba(255, 107, 87, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 107, 87, 0); }
     }
 
     .eyebrow {
-      color: var(--cyan);
+      color: var(--accent-amber);
       font-family: 'JetBrains Mono', monospace;
       font-weight: 600;
       margin-bottom: 12px;
-      letter-spacing: 0.1em;
-      font-size: 0.88rem;
+      letter-spacing: 0.12em;
+      font-size: 0.85rem;
       text-transform: uppercase;
     }
 
     h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2.8rem, 6.2vw, 5.2rem);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(3rem, 6.4vw, 5.4rem);
       line-height: 1.02;
       letter-spacing: -0.04em;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--text) 30%, var(--text-muted) 100%);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .text-gradient {
+      background: var(--primary-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 16px;
     }
 
     .hero-lead {
       color: var(--text-muted);
-      font-size: 1.15rem;
+      font-size: 1.16rem;
       line-height: 1.7;
       max-width: 610px;
       margin-bottom: 34px;
@@ -406,77 +499,57 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 12px 22px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: var(--surface);
+      padding: 13px 24px;
+      border-radius: 14px;
+      border: 1px solid var(--surface-border);
+      background: var(--surface-solid);
       font-weight: 700;
       font-size: 0.94rem;
       color: var(--text);
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
       backdrop-filter: blur(10px);
+      position: relative;
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      border-color: var(--accent);
-      box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.3);
+      border-color: var(--accent-coral);
+      box-shadow: 0 8px 24px -5px rgba(0, 0, 0, 0.4);
     }
 
+    /* High-impact Download CV button */
     .btn-download-cv {
-      background: linear-gradient(135deg, var(--accent) 0%, #059669 100%);
+      background: var(--primary-gradient);
       color: #ffffff !important;
       border: none;
-      box-shadow: 0 6px 24px var(--accent-glow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-download-cv::after {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transform: rotate(30deg);
-      transition: transform 0.6s ease;
-    }
-
-    .btn-download-cv:hover::after {
-      transform: rotate(30deg) translate(50%, 50%);
+      box-shadow: 0 8px 26px var(--accent-coral-glow);
     }
 
     .btn-download-cv:hover {
       transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 10px 30px var(--accent-glow);
+      box-shadow: 0 12px 34px var(--accent-coral-glow);
     }
 
-    .btn-primary {
-      background: var(--surface-solid);
-      border-color: var(--surface-border);
-    }
-
-    /* -------------------------------------------------------------
-       Hero Photo 3D Tilt Card
-    -------------------------------------------------------------- */
+    /* =============================================================
+       Hero Photo 3D Tilt Card (Custom Presentation)
+    ============================================================== */
     .hero-photo-wrap {
       display: flex;
       justify-content: center;
       perspective: 1200px;
+      position: relative;
     }
 
     .photo-tilt-card {
       position: relative;
       width: 100%;
-      max-width: 370px;
+      max-width: 380px;
       padding: 16px;
+      border-radius: 32px;
       background: var(--surface);
       border: 1px solid var(--surface-border);
-      border-radius: 30px;
-      box-shadow: var(--card-shadow), 0 0 35px rgba(var(--accent-rgb), 0.15);
+      box-shadow: var(--card-shadow), 0 0 45px rgba(255, 107, 87, 0.15);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       transform-style: preserve-3d;
@@ -486,10 +559,10 @@
 
     .photo-inner {
       position: relative;
-      border-radius: 22px;
+      border-radius: 24px;
       overflow: hidden;
       aspect-ratio: 1 / 1;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     }
 
     .photo-img {
@@ -506,7 +579,7 @@
 
     .photo-info-bar {
       margin-top: 16px;
-      padding: 12px 16px;
+      padding: 12px 18px;
       background: var(--surface-solid);
       border-radius: 18px;
       display: flex;
@@ -516,65 +589,68 @@
     }
 
     .photo-name {
-      font-weight: 800;
-      font-size: 0.95rem;
-      letter-spacing: -0.02em;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
     }
 
     .photo-role {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.78rem;
-      color: var(--accent);
-      font-weight: 600;
-      background: var(--accent-soft);
-      padding: 3px 8px;
-      border-radius: 6px;
+      color: var(--accent-coral);
+      font-weight: 700;
+      background: rgba(255, 107, 87, 0.12);
+      padding: 4px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 107, 87, 0.25);
     }
 
-    /* Floating Badges on Photo */
+    /* Floating Interactive Badges on Photo */
     .floating-badge {
       position: absolute;
       background: var(--surface-solid);
-      border: 1px solid var(--line);
-      padding: 8px 14px;
+      border: 1px solid var(--surface-border);
+      padding: 9px 16px;
       border-radius: 999px;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 700;
       display: flex;
       align-items: center;
-      gap: 7px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      gap: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       z-index: 10;
-      animation: float 4s ease-in-out infinite alternate;
+      animation: floatBadge 4.5s ease-in-out infinite alternate;
+      backdrop-filter: blur(12px);
     }
 
     .badge-top-left {
-      top: -12px;
-      left: -14px;
+      top: -14px;
+      left: -18px;
     }
 
     .badge-bottom-right {
       bottom: 24px;
-      right: -16px;
-      animation-delay: -2s;
+      right: -20px;
+      animation-delay: -2.2s;
     }
 
-    @keyframes float {
+    @keyframes floatBadge {
       0% { transform: translateY(0); }
-      100% { transform: translateY(-8px); }
+      100% { transform: translateY(-10px); }
     }
 
-    /* -------------------------------------------------------------
+    /* =============================================================
        Sections Common
-    -------------------------------------------------------------- */
+    ============================================================== */
     section {
-      padding: 95px 0;
+      padding: 100px 0;
       border-top: 1px solid var(--line);
       position: relative;
+      z-index: 1;
     }
 
     .section-label {
-      color: var(--accent);
+      color: var(--accent-coral);
       font-family: 'JetBrains Mono', monospace;
       font-weight: 700;
       font-size: 0.85rem;
@@ -583,38 +659,38 @@
       margin-bottom: 12px;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .section-label::before {
       content: "";
-      width: 14px;
+      width: 16px;
       height: 2px;
-      background: var(--accent);
+      background: var(--accent-coral);
     }
 
     h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.2rem, 4.4vw, 3.4rem);
       letter-spacing: -0.04em;
-      margin-bottom: 28px;
-      font-weight: 800;
+      margin-bottom: 32px;
+      font-weight: 700;
     }
 
-    /* -------------------------------------------------------------
+    /* =============================================================
        About Section
-    -------------------------------------------------------------- */
+    ============================================================== */
     .about-grid {
       display: grid;
       grid-template-columns: 1.35fr 0.85fr;
-      gap: 40px;
+      gap: 45px;
       align-items: start;
     }
 
     .about-bio {
-      font-size: 1.08rem;
+      font-size: 1.1rem;
       color: var(--text-muted);
-      line-height: 1.8;
+      line-height: 1.85;
     }
 
     .about-bio p + p {
@@ -628,64 +704,58 @@
     .about-highlights-list {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px;
     }
 
     .highlight-card {
-      padding: 20px 22px;
-      border-radius: 18px;
+      padding: 22px 24px;
     }
 
     .highlight-title {
       font-weight: 750;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       color: var(--text);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       margin-bottom: 6px;
     }
 
     .highlight-desc {
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
-    /* -------------------------------------------------------------
-       Featured Projects (High-Impact Creative Layout)
-    -------------------------------------------------------------- */
+    /* =============================================================
+       Projects Section (Neo-Aurora Bento Cards)
+    ============================================================== */
     .projects-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 32px;
     }
 
     .featured-project {
       position: relative;
-      padding: 38px;
-      border-radius: 28px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      background: linear-gradient(145deg, rgba(16, 185, 129, 0.08) 0%, rgba(16, 23, 38, 0.85) 40%, rgba(6, 182, 212, 0.05) 100%);
-      border: 1px solid rgba(var(--accent-rgb), 0.3);
-      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.6), 0 0 30px rgba(var(--accent-rgb), 0.15);
+      padding: 42px;
+      background: linear-gradient(145deg, rgba(255, 107, 87, 0.08) 0%, var(--surface-solid) 45%, rgba(139, 92, 246, 0.06) 100%);
+      border: 1px solid rgba(255, 107, 87, 0.25);
     }
 
     .featured-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: var(--accent);
+      gap: 7px;
+      background: var(--primary-gradient);
       color: #ffffff;
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 999px;
-      font-size: 0.76rem;
+      font-size: 0.78rem;
       font-weight: 800;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      width: fit-content;
+      box-shadow: 0 4px 14px var(--accent-coral-glow);
     }
 
     .project-header-row {
@@ -694,48 +764,49 @@
       align-items: flex-start;
       gap: 20px;
       flex-wrap: wrap;
+      margin-top: 12px;
     }
 
     .project-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.95rem;
+      font-weight: 700;
       letter-spacing: -0.02em;
     }
 
     .project-date {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.82rem;
-      color: var(--accent);
-      background: var(--accent-soft);
-      padding: 4px 12px;
+      color: var(--accent-amber);
+      background: rgba(245, 158, 11, 0.12);
+      padding: 5px 13px;
       border-radius: 8px;
       font-weight: 700;
+      border: 1px solid rgba(245, 158, 11, 0.25);
     }
 
     .project-stack {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin: 14px 0 18px;
+      margin: 16px 0 20px;
     }
 
     .stack-tag {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: var(--text);
-      background: var(--surface-solid);
+      background: var(--surface);
       border: 1px solid var(--line);
-      padding: 4px 10px;
+      padding: 5px 12px;
       border-radius: 8px;
       transition: all 0.2s ease;
     }
 
     .stack-tag:hover {
-      border-color: var(--accent);
-      color: var(--accent);
+      border-color: var(--accent-coral);
+      color: var(--accent-coral);
       transform: translateY(-2px);
     }
 
@@ -743,10 +814,10 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
       color: var(--text-muted);
-      font-size: 1.02rem;
-      line-height: 1.68;
+      font-size: 1.04rem;
+      line-height: 1.72;
     }
 
     .project-desc-list li {
@@ -755,82 +826,114 @@
     }
 
     .project-desc-list li::before {
-      content: "▹";
+      content: "✦";
       position: absolute;
       left: 0;
       top: 0;
-      color: var(--accent);
-      font-weight: 900;
-      font-size: 1.1rem;
+      color: var(--accent-coral);
+      font-size: 0.95rem;
+    }
+
+    /* Interactive Pollutant Pills */
+    .pollutant-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 8px;
+    }
+
+    .pollutant-chip {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line);
+      color: var(--accent-cyan);
+      transition: all 0.2s ease;
+    }
+
+    .pollutant-chip:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--accent-cyan);
+      transform: scale(1.06);
     }
 
     .project-metric-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 14px;
-      margin: 20px 0 10px;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 16px;
+      margin: 24px 0 14px;
     }
 
     .metric-pill {
-      background: var(--surface-solid);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px 16px;
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 16px;
+      padding: 14px 18px;
       display: flex;
       flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    .metric-pill:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-coral);
     }
 
     .metric-num {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: var(--accent);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--accent-coral);
     }
 
     .metric-label {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--text-dim);
       font-weight: 600;
       text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .other-projects-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      gap: 26px;
       margin-top: 10px;
     }
 
     .project-card {
-      padding: 30px;
+      padding: 32px;
       display: flex;
       flex-direction: column;
-      min-height: 320px;
+      min-height: 330px;
     }
 
     .project-card .project-title {
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       margin: 10px 0 6px;
     }
 
     .project-card p {
       color: var(--text-muted);
-      font-size: 0.96rem;
-      line-height: 1.62;
+      font-size: 0.98rem;
+      line-height: 1.65;
     }
 
     .project-card-footer {
       margin-top: auto;
-      padding-top: 22px;
+      padding-top: 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .project-link-btn {
-      color: var(--accent);
+      color: var(--accent-coral);
       font-weight: 750;
-      font-size: 0.92rem;
+      font-size: 0.94rem;
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -842,33 +945,34 @@
       gap: 10px;
     }
 
-    /* -------------------------------------------------------------
-       Skills Matrix
-    -------------------------------------------------------------- */
+    /* =============================================================
+       Skills Section
+    ============================================================== */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
     }
 
     .skill-card {
-      padding: 26px;
+      padding: 28px;
     }
 
     .skill-category-header {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 14px;
+      gap: 12px;
+      margin-bottom: 16px;
     }
 
     .category-icon {
-      font-size: 1.4rem;
+      font-size: 1.45rem;
     }
 
     .skill-card h3 {
-      font-size: 1.15rem;
-      font-weight: 750;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
     }
 
     .skill-tags {
@@ -879,189 +983,235 @@
 
     .skill-badge {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      padding: 5px 11px;
+      padding: 6px 12px;
       background: var(--surface-solid);
-      border: 1px solid var(--line);
-      border-radius: 8px;
+      border: 1px solid var(--surface-border);
+      border-radius: 9px;
       color: var(--text);
       transition: all 0.2s ease;
       cursor: default;
     }
 
     .skill-badge:hover {
-      background: var(--accent-soft);
-      border-color: var(--accent);
-      color: var(--accent);
+      background: rgba(255, 107, 87, 0.14);
+      border-color: var(--accent-coral);
+      color: var(--accent-coral);
       transform: translateY(-2px) scale(1.05);
     }
 
-    /* -------------------------------------------------------------
-       Training & Experience
-    -------------------------------------------------------------- */
-    .experience-card {
-      padding: 34px;
-      border-radius: 24px;
+    /* =============================================================
+       Training Section
+    ============================================================== */
+    .training-card {
+      padding: 38px;
+      border-radius: 28px;
       max-width: 950px;
     }
 
-    .exp-header {
+    .training-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 14px;
+      gap: 14px;
+      margin-bottom: 12px;
     }
 
-    .exp-company {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.45rem;
-      font-weight: 800;
-      color: var(--text);
-    }
-
-    .exp-role {
-      color: var(--accent);
+    .training-company-link {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
       font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 16px;
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s ease;
     }
 
-    .exp-bullets {
+    .training-company-link:hover {
+      color: var(--accent-coral);
+    }
+
+    .training-role {
+      color: var(--accent-coral);
+      font-weight: 700;
+      font-size: 1.08rem;
+      margin-bottom: 18px;
+    }
+
+    .training-bullets {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
       color: var(--text-muted);
-      font-size: 1rem;
-      line-height: 1.68;
+      font-size: 1.02rem;
+      line-height: 1.72;
+      margin-bottom: 24px;
     }
 
-    .exp-bullets li {
+    .training-bullets li {
       position: relative;
-      padding-left: 22px;
+      padding-left: 24px;
     }
 
-    .exp-bullets li::before {
-      content: "•";
+    .training-bullets li::before {
+      content: "▹";
       position: absolute;
       left: 0;
-      color: var(--accent);
+      color: var(--accent-coral);
       font-weight: 900;
-      font-size: 1.3rem;
-      line-height: 1;
     }
 
-    /* -------------------------------------------------------------
-       Certificates Grid
-    -------------------------------------------------------------- */
+    /* =============================================================
+       Certificates Grid (with Hyperlinked Company & Verification)
+    ============================================================== */
     .certificates-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 22px;
     }
 
     .cert-card {
-      padding: 24px;
+      padding: 28px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      min-height: 200px;
     }
 
-    .cert-issuer {
+    .cert-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .cert-company-link {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.78rem;
-      color: var(--cyan);
+      font-size: 0.84rem;
       font-weight: 700;
+      color: var(--accent-cyan);
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      margin-bottom: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s ease;
+    }
+
+    .cert-company-link:hover {
+      color: var(--text);
+      text-decoration: underline;
+    }
+
+    .cert-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      font-weight: 600;
     }
 
     .cert-title {
-      font-size: 1.15rem;
-      font-weight: 750;
-      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.22rem;
+      font-weight: 700;
       line-height: 1.4;
-      margin-bottom: 14px;
+      margin-bottom: 20px;
     }
 
     .cert-footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 14px;
+      padding-top: 16px;
       border-top: 1px solid var(--line);
-      font-size: 0.85rem;
-      color: var(--text-dim);
     }
 
-    .cert-badge {
-      color: var(--accent);
+    /* Direct Hyperlinked Verification Link */
+    .cert-verify-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255, 107, 87, 0.1);
+      color: var(--accent-coral);
+      border: 1px solid rgba(255, 107, 87, 0.25);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
       font-weight: 700;
+      transition: all 0.2s ease;
     }
 
-    /* -------------------------------------------------------------
+    .cert-verify-link:hover {
+      background: var(--accent-coral);
+      color: #ffffff;
+      border-color: var(--accent-coral);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px var(--accent-coral-glow);
+    }
+
+    /* =============================================================
        Education Section
-    -------------------------------------------------------------- */
+    ============================================================== */
     .education-grid {
       display: grid;
       grid-template-columns: 1.3fr 1fr;
-      gap: 24px;
+      gap: 26px;
     }
 
     .edu-card {
-      padding: 30px;
+      padding: 34px;
     }
 
     .edu-inst {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.35rem;
-      font-weight: 800;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
       margin-bottom: 4px;
     }
 
     .edu-loc {
       color: var(--text-dim);
       font-size: 0.88rem;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .edu-degree {
       color: var(--text);
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.05rem;
       margin-bottom: 6px;
     }
 
     .edu-spec {
-      color: var(--accent);
-      font-size: 0.92rem;
+      color: var(--accent-coral);
+      font-size: 0.94rem;
       font-weight: 600;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .edu-score-pill {
       display: inline-block;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.84rem;
+      font-size: 0.85rem;
       font-weight: 700;
-      color: var(--accent);
-      background: var(--accent-soft);
-      padding: 4px 12px;
+      color: var(--accent-amber);
+      background: rgba(245, 158, 11, 0.12);
+      padding: 5px 14px;
       border-radius: 999px;
-      border: 1px solid var(--accent);
+      border: 1px solid rgba(245, 158, 11, 0.25);
     }
 
-    /* -------------------------------------------------------------
+    /* =============================================================
        Contact Section
-    -------------------------------------------------------------- */
+    ============================================================== */
     .contact-box {
-      background: linear-gradient(145deg, #111827 0%, #0d131f 100%);
-      border: 1px solid rgba(var(--accent-rgb), 0.35);
-      border-radius: 30px;
+      background: linear-gradient(145deg, var(--surface-solid) 0%, #171b26 100%);
+      border: 1px solid rgba(255, 107, 87, 0.3);
+      border-radius: 32px;
       padding: 60px;
       position: relative;
       overflow: hidden;
@@ -1073,9 +1223,9 @@
       position: absolute;
       top: -120px;
       right: -120px;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, var(--accent-coral-glow) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -1083,11 +1233,11 @@
       color: var(--text-muted);
       font-size: 1.15rem;
       max-width: 620px;
-      margin: 12px 0 34px;
-      line-height: 1.7;
+      margin: 14px 0 34px;
+      line-height: 1.72;
     }
 
-    .contact-meta-row {
+    .contact-chips {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
@@ -1095,55 +1245,57 @@
     }
 
     .contact-chip {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 10px 18px;
-      border-radius: 12px;
-      font-size: 0.92rem;
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      padding: 11px 20px;
+      border-radius: 14px;
+      font-size: 0.94rem;
       font-weight: 600;
       color: var(--text);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 9px;
       transition: all 0.2s ease;
     }
 
     .contact-chip:hover {
-      border-color: var(--accent);
-      background: rgba(var(--accent-rgb), 0.1);
+      border-color: var(--accent-coral);
       transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     }
 
-    /* -------------------------------------------------------------
+    /* =============================================================
        Footer
-    -------------------------------------------------------------- */
+    ============================================================== */
     footer {
-      padding: 40px 0 50px;
+      padding: 42px 0 50px;
       border-top: 1px solid var(--line);
       color: var(--text-dim);
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
     .footer-links {
       display: flex;
-      gap: 22px;
+      gap: 24px;
       font-weight: 600;
     }
 
     .footer-links a:hover {
-      color: var(--accent);
+      color: var(--accent-coral);
     }
 
-    /* -------------------------------------------------------------
-       Responsive Design Breakpoints
-    -------------------------------------------------------------- */
+    /* =============================================================
+       Responsive Breakpoints
+    ============================================================== */
     @media (max-width: 960px) {
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 45px;
         text-align: center;
       }
 
@@ -1172,7 +1324,7 @@
       }
 
       .photo-tilt-card {
-        max-width: 300px;
+        max-width: 320px;
       }
     }
 
@@ -1182,7 +1334,7 @@
       }
 
       .hero {
-        padding: 40px 0 60px;
+        padding: 45px 0 65px;
       }
 
       .skills-grid {
@@ -1190,7 +1342,7 @@
       }
 
       .contact-box {
-        padding: 36px 24px;
+        padding: 38px 24px;
       }
 
       .floating-badge {
@@ -1207,10 +1359,15 @@
 </head>
 <body>
 
-<!-- Interactive Particle / Node Background for Hero -->
-<canvas id="hero-canvas"></canvas>
+<!-- Ambient Glowing Background Orbs & Grid -->
+<div class="aurora-backdrop">
+  <div class="aurora-orb orb-1"></div>
+  <div class="aurora-orb orb-2"></div>
+  <div class="aurora-orb orb-3"></div>
+</div>
+<div class="grid-overlay"></div>
 
-<!-- Navigation -->
+<!-- Navigation Bar -->
 <nav>
   <div class="container nav-inner">
     <a class="brand" href="#">
@@ -1229,13 +1386,13 @@
     </div>
 
     <div class="nav-actions">
-      <!-- Theme Switcher -->
+      <!-- Theme Switcher (Sunset Dark / Tuscan Light) -->
       <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme" title="Toggle Dark/Light Mode">
         <span id="theme-icon">🌙</span>
       </button>
 
-      <!-- Download CV Button in Navbar -->
-      <a href="assets/Nayan_Deva_KV_Resume.pdf" download="Nayan_Deva_KV_Resume.pdf" class="nav-cv-btn" title="Download Nayan Deva's CV">
+      <!-- Download CV Button in Navigation -->
+      <a href="assets/Nayan_Deva_KV_Resume.pdf" download="Nayan_Deva_KV_Resume.pdf" class="nav-cv-btn" title="Download CV">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
           <polyline points="7 10 12 15 17 10"></polyline>
@@ -1256,16 +1413,16 @@
           <span class="status-dot"></span> Available for Internships & Projects
         </div>
 
-        <div class="eyebrow">// DATA SCIENCE • ML • CLOUD</div>
-        <h1>Nayan Deva K V</h1>
+        <div class="eyebrow">// DATA SCIENCE • MACHINE LEARNING • CLOUD</div>
+        <h1>Nayan Deva <span class="text-gradient">K V</span></h1>
 
         <p class="hero-lead">
           <strong>Computer Science Engineering student</strong> specializing in Data Science & Machine Learning.
-          Proven track record in end-to-end data processing pipelines, predictive analysis, and scalable AWS cloud architectures.
+          Specialized in building end-to-end data analytics pipelines, exploratory data analysis, and scalable AWS cloud deployments.
         </p>
 
         <div class="buttons">
-          <!-- Download CV Button with glowing gradient -->
+          <!-- Download CV CTA with Radiant Sunset Gradient -->
           <a href="assets/Nayan_Deva_KV_Resume.pdf" download="Nayan_Deva_KV_Resume.pdf" class="btn btn-download-cv">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -1275,15 +1432,15 @@
             <span>Download CV (PDF)</span>
           </a>
 
-          <a class="btn btn-primary" href="#projects">Explore Projects ↓</a>
+          <a class="btn" href="#projects">View Projects ↓</a>
           <a class="btn" href="https://github.com/nayandeva" target="_blank" rel="noopener">GitHub ↗</a>
-          <a class="btn" href="https://www.linkedin.com/in/nayandeva/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn" href="https://www.linkedin.com/in/nayan-deva/" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
       </div>
 
       <!-- 3D Interactive Tilt Photo Card -->
       <div class="hero-photo-wrap">
-        <div class="photo-tilt-card spotlight-card" id="tilt-card">
+        <div class="photo-tilt-card prismatic-card" id="tilt-card">
           <!-- Floating interactive badges -->
           <div class="floating-badge badge-top-left">
             <span>📊</span> 26 Cities Air Quality Pipeline
@@ -1319,51 +1476,49 @@
           <p>
             I am a 3rd-year <strong>Computer Science and Engineering</strong> student specializing in
             <strong>Data Science with Machine Learning</strong> at Lovely Professional University (CGPA: 7.32).
-            My passion lies at the intersection of statistical analysis, data pipeline engineering, and cloud deployment.
+            My passion lies in transforming complex datasets into meaningful insights and architecting resilient cloud systems.
           </p>
           <p>
-            Recently engineered an in-depth <strong>Indian Air Quality Analysis</strong> across 26 major cities (2015–2020),
-            evaluating 8 critical air pollutants to deliver data-backed environmental insights. Beyond analytics,
-            I have hands-on experience deploying scalable web architectures on <strong>AWS (EC2, ALB, Auto Scaling, CloudWatch)</strong>,
-            building GUI desktop utilities in Python, and low-level POSIX file systems in C.
+            Recently engineered the <strong>Indian Air Quality Analysis</strong> across 26 major cities (2015–2020),
+            evaluating 8 critical air pollutants with correlation, distribution, and outlier detection to deliver policy-grade environmental insights.
+            Additionally, I have hands-on experience deploying scalable web architectures on <strong>AWS (EC2, ALB, Auto Scaling, CloudWatch)</strong>,
+            building GUI desktop tools in Python, and low-level POSIX file systems in C.
           </p>
           <p>
-            Constantly learning and solving real-world challenges through clean, maintainable code and analytical rigor.
+            Enthusiastic about collaborating on impactful software engineering, data science, and cloud challenges.
           </p>
         </div>
 
         <div class="about-highlights-list">
-          <div class="spotlight-card highlight-card">
+          <div class="prismatic-card highlight-card">
             <div class="highlight-title">🎯 Core Competency</div>
-            <div class="highlight-desc">Data Wrangling, Exploratory Data Analysis, Machine Learning, Power BI Dashboards</div>
+            <div class="highlight-desc">Data Pipelines, Exploratory Data Analysis, Machine Learning, Power BI Dashboards</div>
           </div>
-          <div class="spotlight-card highlight-card">
+          <div class="prismatic-card highlight-card">
             <div class="highlight-title">☁️ Cloud Infrastructure</div>
-            <div class="highlight-desc">AWS EC2, Application Load Balancers, Auto Scaling Groups & CloudWatch Monitoring</div>
+            <div class="highlight-desc">AWS EC2, Application Load Balancers, Auto Scaling Groups & CloudWatch</div>
           </div>
-          <div class="spotlight-card highlight-card">
-            <div class="highlight-title">💡 Soft Skills</div>
-            <div class="highlight-desc">Problem-Solving, Analytical Thinking, Teamwork, Communication, Rapid Learning</div>
+          <div class="prismatic-card highlight-card">
+            <div class="highlight-title">💡 Professional Strengths</div>
+            <div class="highlight-desc">Problem-Solving, Analytical Thinking, Teamwork, Communication, Continuous Learning</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Featured Projects Section -->
   <section id="projects">
     <div class="container">
       <div class="section-label">02 — Featured Work</div>
-      <h2>Things I've Built.</h2>
+      <h2>Selected Projects.</h2>
 
       <div class="projects-grid">
         <!-- FEATURED PROJECT 01: Indian Air Quality Analysis -->
-        <article class="spotlight-card featured-project">
+        <article class="prismatic-card featured-project">
+          <div class="featured-badge">🌟 Featured Data Science Project</div>
           <div class="project-header-row">
-            <div>
-              <div class="featured-badge">🌟 Featured Project</div>
-              <h3 class="project-title" style="margin-top: 10px;">Indian Air Quality Analysis</h3>
-            </div>
+            <h3 class="project-title">Indian Air Quality Analysis</h3>
             <div class="project-date">Sep’ 26</div>
           </div>
 
@@ -1376,17 +1531,29 @@
             <span class="stack-tag">Power BI</span>
           </div>
 
+          <!-- Interactive Pollutant Pills -->
+          <div class="pollutant-chips">
+            <span class="pollutant-chip" title="Particulate Matter ≤ 2.5 µm">PM2.5</span>
+            <span class="pollutant-chip" title="Particulate Matter ≤ 10 µm">PM10</span>
+            <span class="pollutant-chip" title="Nitrogen Dioxide">NO₂</span>
+            <span class="pollutant-chip" title="Sulfur Dioxide">SO₂</span>
+            <span class="pollutant-chip" title="Carbon Monoxide">CO</span>
+            <span class="pollutant-chip" title="Ozone">O₃</span>
+            <span class="pollutant-chip" title="Ammonia">NH₃</span>
+            <span class="pollutant-chip" style="color: var(--accent-coral);" title="Air Quality Index">AQI</span>
+          </div>
+
           <ul class="project-desc-list">
             <li>
               Built an end-to-end data processing pipeline over air-quality records from <strong>26 Indian cities (2015–2020)</strong>,
-              covering PM2.5, PM10, NO₂, SO₂, CO, O₃, NH₃, and AQI across multiple monitoring stations.
+              covering PM2.5, PM10, NO₂, SO₂, CO, O₃, NH₃, and AQI across multiple monitoring locations.
             </li>
             <li>
-              Applied correlation matrices, distribution analysis, and outlier-detection techniques using Pandas, NumPy, Matplotlib,
-              Seaborn, and Power BI to write clean, reusable analysis code and uncover regional, seasonal, and yearly trends.
+              Applied correlation, distribution, and outlier-detection techniques using Pandas, NumPy, Matplotlib, Seaborn, and Power BI
+              to write clean, reusable analysis code and examine regional, seasonal, and yearly trends.
             </li>
             <li>
-              Delivered data-driven insights highlighting pollution-prone metropolitan locations and high-risk temporal periods to directly support environmental monitoring and policy planning.
+              Delivered data-driven insights on pollution-prone locations and periods to support environmental monitoring and policy planning.
             </li>
           </ul>
 
@@ -1401,12 +1568,12 @@
             </div>
             <div class="metric-pill">
               <span class="metric-num">2015–2020</span>
-              <span class="metric-label">Multi-Year Scope</span>
+              <span class="metric-label">Multi-Year Dataset</span>
             </div>
           </div>
 
           <div class="project-card-footer">
-            <a href="https://github.com/nayandeva" target="_blank" rel="noopener" class="btn btn-primary project-link-btn">
+            <a href="https://github.com/nayandeva" target="_blank" rel="noopener" class="btn btn-download-cv">
               <span>View Source on GitHub</span>
               <span>↗</span>
             </a>
@@ -1416,11 +1583,11 @@
         <!-- Other Projects Grid -->
         <div class="other-projects-grid">
           <!-- PROJECT 02: AWS Auto Scaling Demo -->
-          <article class="spotlight-card project-card">
+          <article class="prismatic-card project-card">
             <div class="project-header-row">
               <div class="project-date">Jul’ 26</div>
             </div>
-            <h3 class="project-title">AWS Auto Scaling Demo</h3>
+            <h3 class="project-title">AWS Auto Scaling Infrastructure</h3>
             <div class="project-stack">
               <span class="stack-tag">AWS EC2</span>
               <span class="stack-tag">ALB</span>
@@ -1430,17 +1597,17 @@
             </div>
             <p>
               Deployed and integrated a cloud-based Node.js application on EC2, automating traffic distribution with an Application Load Balancer
-              and Auto Scaling Group to seamlessly handle variable workloads and traffic spikes with custom CloudWatch metric policies.
+              and Auto Scaling Group to seamlessly manage variable workloads and dynamic traffic surges.
             </p>
             <div class="project-card-footer">
               <a href="https://github.com/nayandeva" target="_blank" rel="noopener" class="project-link-btn">
-                <span>GitHub Repository</span> <span>↗</span>
+                <span>View on GitHub</span> <span>↗</span>
               </a>
             </div>
           </article>
 
           <!-- PROJECT 03: Watermark Pro -->
-          <article class="spotlight-card project-card">
+          <article class="prismatic-card project-card">
             <div class="project-header-row">
               <div class="project-date">Jan’ 26</div>
             </div>
@@ -1453,17 +1620,17 @@
             </div>
             <p>
               Designed and developed a desktop utility in Python for applying customizable text and logo watermarks to digital images.
-              Implemented drag-and-drop placement, opacity controls, live interactive preview, and batch export functionality.
+              Features drag-and-drop placement, opacity controls, real-time live preview, and batch export support.
             </p>
             <div class="project-card-footer">
               <a href="https://github.com/nayandeva" target="_blank" rel="noopener" class="project-link-btn">
-                <span>GitHub Repository</span> <span>↗</span>
+                <span>View on GitHub</span> <span>↗</span>
               </a>
             </div>
           </article>
 
-          <!-- PROJECT 04: E-Commerce Sales & Segmentation -->
-          <article class="spotlight-card project-card">
+          <!-- PROJECT 04: E-Commerce Customer Segmentation -->
+          <article class="prismatic-card project-card">
             <div class="project-header-row">
               <div class="project-date">Analytics</div>
             </div>
@@ -1472,21 +1639,21 @@
               <span class="stack-tag">Python</span>
               <span class="stack-tag">Pandas</span>
               <span class="stack-tag">Power BI</span>
-              <span class="stack-tag">RFM Analysis</span>
+              <span class="stack-tag">RFM Segmentation</span>
             </div>
             <p>
-              Analyzed e-commerce transaction logs to evaluate revenue drivers, purchasing behaviors, and RFM customer clusters.
-              Engineered interactive Power BI dashboards communicating key sales trends.
+              Analyzed e-commerce transactional records to uncover sales trends, purchasing behavior, and customer segmentation clusters
+              with interactive Power BI dashboards communicating key commercial metrics.
             </p>
             <div class="project-card-footer">
               <a href="https://github.com/nayandeva" target="_blank" rel="noopener" class="project-link-btn">
-                <span>GitHub Repository</span> <span>↗</span>
+                <span>View on GitHub</span> <span>↗</span>
               </a>
             </div>
           </article>
 
           <!-- PROJECT 05: Directory Management in C -->
-          <article class="spotlight-card project-card">
+          <article class="prismatic-card project-card">
             <div class="project-header-row">
               <div class="project-date">Systems</div>
             </div>
@@ -1498,11 +1665,11 @@
             </div>
             <p>
               Engineered a high-performance C system scanning directory trees to classify, sort, and reorganize files based on extensions
-              and content patterns with safe collision resolution and preview mode.
+              and content patterns with safe collision handling and preview mode.
             </p>
             <div class="project-card-footer">
               <a href="https://github.com/nayandeva" target="_blank" rel="noopener" class="project-link-btn">
-                <span>GitHub Repository</span> <span>↗</span>
+                <span>View on GitHub</span> <span>↗</span>
               </a>
             </div>
           </article>
@@ -1514,11 +1681,11 @@
   <!-- Skills Section -->
   <section id="skills">
     <div class="container">
-      <div class="section-label">03 — Capabilities</div>
+      <div class="section-label">03 — Skills</div>
       <h2>Technical Arsenal.</h2>
 
       <div class="skills-grid">
-        <div class="spotlight-card skill-card">
+        <div class="prismatic-card skill-card">
           <div class="skill-category-header">
             <span class="category-icon">💻</span>
             <h3>Languages</h3>
@@ -1532,7 +1699,7 @@
           </div>
         </div>
 
-        <div class="spotlight-card skill-card">
+        <div class="prismatic-card skill-card">
           <div class="skill-category-header">
             <span class="category-icon">📊</span>
             <h3>Tools & Platforms</h3>
@@ -1546,7 +1713,7 @@
           </div>
         </div>
 
-        <div class="spotlight-card skill-card">
+        <div class="prismatic-card skill-card">
           <div class="skill-category-header">
             <span class="category-icon">🧠</span>
             <h3>Data Science & ML</h3>
@@ -1560,7 +1727,7 @@
           </div>
         </div>
 
-        <div class="spotlight-card skill-card">
+        <div class="prismatic-card skill-card">
           <div class="skill-category-header">
             <span class="category-icon">☁️</span>
             <h3>DevOps & Cloud</h3>
@@ -1574,7 +1741,7 @@
           </div>
         </div>
 
-        <div class="spotlight-card skill-card">
+        <div class="prismatic-card skill-card">
           <div class="skill-category-header">
             <span class="category-icon">⚙️</span>
             <h3>Software & Systems</h3>
@@ -1588,7 +1755,7 @@
           </div>
         </div>
 
-        <div class="spotlight-card skill-card">
+        <div class="prismatic-card skill-card">
           <div class="skill-category-header">
             <span class="category-icon">🤝</span>
             <h3>Professional Strengths</h3>
@@ -1605,25 +1772,28 @@
     </div>
   </section>
 
-  <!-- Training & Hands-On Experience -->
+  <!-- Hands-On Training Section -->
   <section id="training">
     <div class="container">
-      <div class="section-label">04 — Hands-On Training</div>
-      <h2>Practical Experience.</h2>
+      <div class="section-label">04 — Training</div>
+      <h2>Hands-On Training.</h2>
 
-      <div class="spotlight-card experience-card">
-        <div class="exp-header">
+      <div class="prismatic-card training-card">
+        <div class="training-header">
           <div>
-            <div class="exp-company">Eduniketan Private Limited</div>
-            <div class="exp-role">DevOps & Cloud Engineering Training</div>
+            <a href="https://www.eduniketanpvtltd.com/verify/certificates/preview?id=6774-2345-8972-6539" target="_blank" rel="noopener" class="training-company-link" title="Verify Eduniketan Training">
+              <span>Eduniketan Private Limited</span>
+              <span style="font-size: 0.95rem; color: var(--accent-coral);">↗</span>
+            </a>
+            <div class="training-role">DevOps & Cloud Engineering Training</div>
           </div>
           <div class="project-date">Jun’ 26 – Jul’ 26</div>
         </div>
 
-        <ul class="exp-bullets">
+        <ul class="training-bullets">
           <li>
             Designed and deployed a scalable web application infrastructure using AWS EC2, Application Load Balancer,
-            Auto Scaling, and CloudWatch as part of a rigorous DevOps and cloud engineering training program.
+            Auto Scaling, and CloudWatch as part of a DevOps and cloud engineering training program.
           </li>
           <li>
             Implemented load balancing and Auto Scaling to efficiently distribute traffic across EC2 instances, configuring
@@ -1631,72 +1801,125 @@
           </li>
           <li>
             Deployed a Node.js web application on AWS and used CloudWatch for monitoring, gaining hands-on experience
-            in cloud infrastructure, automation, scalability, and system monitoring — core DevOps practices.
+            in cloud infrastructure, automation, scalability, and system monitoring.
           </li>
         </ul>
+
+        <a href="https://www.eduniketanpvtltd.com/verify/certificates/preview?id=6774-2345-8972-6539" target="_blank" rel="noopener" class="cert-verify-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <span>Verify Training Certificate ↗</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Certificates Section -->
+  <!-- Certificates Section (Company & Verification Hyperlinked) -->
   <section id="certificates">
     <div class="container">
-      <div class="section-label">05 — Verification</div>
-      <h2>Certifications.</h2>
+      <div class="section-label">05 — Certifications</div>
+      <h2>Verified Credentials.</h2>
 
       <div class="certificates-grid">
-        <div class="spotlight-card cert-card">
+        <!-- CERTIFICATE 01: Infosys DBMS -->
+        <div class="prismatic-card cert-card">
           <div>
-            <div class="cert-issuer">Infosys</div>
-            <div class="cert-title">Database Management System Part 1</div>
+            <div class="cert-top">
+              <a href="https://docs.google.com/document/d/1T6_JWEeq9GcBZyZ3f7MhlO1uUDgqygxnK9Noh0s5chQ/edit?usp=sharing" target="_blank" rel="noopener" class="cert-company-link" title="Infosys Certificate">
+                <span>Infosys</span>
+                <span>↗</span>
+              </a>
+              <span class="cert-date">Aug’ 26</span>
+            </div>
+            <h4 class="cert-title">Database Management System Part 1</h4>
           </div>
           <div class="cert-footer">
-            <span class="cert-badge">Verified Certification</span>
-            <span>Aug’ 26</span>
+            <a href="https://docs.google.com/document/d/1T6_JWEeq9GcBZyZ3f7MhlO1uUDgqygxnK9Noh0s5chQ/edit?usp=sharing" target="_blank" rel="noopener" class="cert-verify-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>Verify Certificate ↗</span>
+            </a>
           </div>
         </div>
 
-        <div class="spotlight-card cert-card">
+        <!-- CERTIFICATE 02: UpGrad Python Project -->
+        <div class="prismatic-card cert-card">
           <div>
-            <div class="cert-issuer">UpGrad Campus</div>
-            <div class="cert-title">Python Project</div>
+            <div class="cert-top">
+              <a href="https://upgradcampus.certificate.givemycertificate.com/c/6a6c0169-886a-46b0-b122-8553cab00855" target="_blank" rel="noopener" class="cert-company-link" title="UpGrad Campus Certificate">
+                <span>UpGrad Campus</span>
+                <span>↗</span>
+              </a>
+              <span class="cert-date">May’ 26</span>
+            </div>
+            <h4 class="cert-title">Python Project</h4>
           </div>
           <div class="cert-footer">
-            <span class="cert-badge">Verified Certification</span>
-            <span>May’ 26</span>
+            <a href="https://upgradcampus.certificate.givemycertificate.com/c/6a6c0169-886a-46b0-b122-8553cab00855" target="_blank" rel="noopener" class="cert-verify-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>Verify Certificate ↗</span>
+            </a>
           </div>
         </div>
 
-        <div class="spotlight-card cert-card">
+        <!-- CERTIFICATE 03: UpGrad DAA -->
+        <div class="prismatic-card cert-card">
           <div>
-            <div class="cert-issuer">UpGrad Campus</div>
-            <div class="cert-title">Design and Analysis of Algorithm</div>
+            <div class="cert-top">
+              <a href="https://upgradcampus.certificate.givemycertificate.com/c/c942bf87-db53-44e9-b434-296aeedb1b7f" target="_blank" rel="noopener" class="cert-company-link" title="UpGrad Campus Certificate">
+                <span>UpGrad Campus</span>
+                <span>↗</span>
+              </a>
+              <span class="cert-date">May’ 26</span>
+            </div>
+            <h4 class="cert-title">Design and Analysis of Algorithm</h4>
           </div>
           <div class="cert-footer">
-            <span class="cert-badge">Verified Certification</span>
-            <span>May’ 26</span>
+            <a href="https://upgradcampus.certificate.givemycertificate.com/c/c942bf87-db53-44e9-b434-296aeedb1b7f" target="_blank" rel="noopener" class="cert-verify-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>Verify Certificate ↗</span>
+            </a>
           </div>
         </div>
 
-        <div class="spotlight-card cert-card">
+        <!-- CERTIFICATE 04: UpGrad Data Structure -->
+        <div class="prismatic-card cert-card">
           <div>
-            <div class="cert-issuer">UpGrad Campus</div>
-            <div class="cert-title">Data Structure</div>
+            <div class="cert-top">
+              <a href="https://upgradcampus.certificate.givemycertificate.com/c/3c6fded6-ca33-4103-836f-b33246cc6706" target="_blank" rel="noopener" class="cert-company-link" title="UpGrad Campus Certificate">
+                <span>UpGrad Campus</span>
+                <span>↗</span>
+              </a>
+              <span class="cert-date">May’ 26</span>
+            </div>
+            <h4 class="cert-title">Data Structure</h4>
           </div>
           <div class="cert-footer">
-            <span class="cert-badge">Verified Certification</span>
-            <span>May’ 26</span>
+            <a href="https://upgradcampus.certificate.givemycertificate.com/c/3c6fded6-ca33-4103-836f-b33246cc6706" target="_blank" rel="noopener" class="cert-verify-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>Verify Certificate ↗</span>
+            </a>
           </div>
         </div>
 
-        <div class="spotlight-card cert-card">
+        <!-- CERTIFICATE 05: Coursera Digital Systems -->
+        <div class="prismatic-card cert-card">
           <div>
-            <div class="cert-issuer">Coursera</div>
-            <div class="cert-title">Digital Systems: From Logic Gates to Processors</div>
+            <div class="cert-top">
+              <a href="https://www.coursera.org/account/accomplishments/verify/Z7RA3JW0I8AM" target="_blank" rel="noopener" class="cert-company-link" title="Coursera Certificate">
+                <span>Coursera</span>
+                <span>↗</span>
+              </a>
+              <span class="cert-date">Oct’ 25</span>
+            </div>
+            <h4 class="cert-title">Digital Systems: From Logic Gates to Processors</h4>
           </div>
           <div class="cert-footer">
-            <span class="cert-badge">Verified Certification</span>
-            <span>Oct’ 25</span>
+            <a href="https://www.coursera.org/account/accomplishments/verify/Z7RA3JW0I8AM" target="_blank" rel="noopener" class="cert-verify-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>Verify Certificate ↗</span>
+            </a>
           </div>
         </div>
       </div>
@@ -1706,41 +1929,41 @@
   <!-- Education Section -->
   <section id="education">
     <div class="container">
-      <div class="section-label">06 — Academics</div>
-      <h2>Education.</h2>
+      <div class="section-label">06 — Education</div>
+      <h2>Academic Foundation.</h2>
 
       <div class="education-grid">
         <!-- University -->
-        <div class="spotlight-card edu-card">
+        <div class="prismatic-card edu-card">
           <div class="edu-inst">Lovely Professional University</div>
           <div class="edu-loc">Phagwara, Punjab</div>
           <div class="edu-degree">Bachelor of Technology — Computer Science and Engineering</div>
           <div class="edu-spec">Specialization: Data Science with Machine Learning</div>
-          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
             <span class="edu-score-pill">CGPA: 7.32</span>
             <span style="font-size: 0.85rem; color: var(--text-dim);">Aug’ 24 – Present</span>
           </div>
         </div>
 
-        <!-- Schooling Stack -->
+        <!-- Schooling -->
         <div style="display: flex; flex-direction: column; gap: 20px;">
-          <div class="spotlight-card edu-card" style="padding: 22px;">
-            <div style="font-weight: 800; font-size: 1.1rem;">St. Joseph Higher Secondary School</div>
+          <div class="prismatic-card edu-card" style="padding: 24px;">
+            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.15rem;">St. Joseph Higher Secondary School</div>
             <div class="edu-loc">Thrissur, Kerala</div>
-            <div style="font-size: 0.92rem; font-weight: 600; color: var(--text);">Intermediate (Plus Two)</div>
-            <div style="margin-top: 8px;">
+            <div style="font-size: 0.94rem; font-weight: 600; color: var(--text);">Intermediate (Plus Two)</div>
+            <div style="margin-top: 10px;">
               <span class="edu-score-pill">Score: 91%</span>
-              <span style="font-size: 0.82rem; color: var(--text-dim); margin-left: 8px;">Jun’ 22 – May’ 24</span>
+              <span style="font-size: 0.82rem; color: var(--text-dim); margin-left: 10px;">Jun’ 22 – May’ 24</span>
             </div>
           </div>
 
-          <div class="spotlight-card edu-card" style="padding: 22px;">
-            <div style="font-weight: 800; font-size: 1.1rem;">St. Thomas Higher Secondary School</div>
+          <div class="prismatic-card edu-card" style="padding: 24px;">
+            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.15rem;">St. Thomas Higher Secondary School</div>
             <div class="edu-loc">Thrissur, Kerala</div>
-            <div style="font-size: 0.92rem; font-weight: 600; color: var(--text);">Matriculation (10th Standard)</div>
-            <div style="margin-top: 8px;">
+            <div style="font-size: 0.94rem; font-weight: 600; color: var(--text);">Matriculation (10th Standard)</div>
+            <div style="margin-top: 10px;">
               <span class="edu-score-pill">Score: 95%</span>
-              <span style="font-size: 0.82rem; color: var(--text-dim); margin-left: 8px;">Jun’ 22 – May’ 24</span>
+              <span style="font-size: 0.82rem; color: var(--text-dim); margin-left: 10px;">Jun’ 22 – May’ 24</span>
             </div>
           </div>
         </div>
@@ -1752,14 +1975,14 @@
   <section id="contact">
     <div class="container">
       <div class="contact-box">
-        <div class="section-label" style="color: var(--accent);">07 — Contact</div>
+        <div class="section-label">07 — Contact</div>
         <h2>Let's build something exceptional.</h2>
         <p class="contact-lead">
-          I am actively exploring internship opportunities, research collaborations, and project partnerships in Data Science, Machine Learning, and Cloud Engineering.
+          I am actively seeking internship opportunities, collaborative research, and software/data projects. Feel free to reach out directly.
         </p>
 
         <!-- Direct Contact Chips -->
-        <div class="contact-meta-row">
+        <div class="contact-chips">
           <a href="mailto:nayandevakv147@gmail.com" class="contact-chip">
             <span>✉️</span> nayandevakv147@gmail.com
           </a>
@@ -1767,12 +1990,12 @@
             <span>📞</span> +91 8129640998
           </a>
           <span class="contact-chip">
-            <span>📍</span> India
+            <span>📍</span> Thrissur / Punjab, India
           </span>
         </div>
 
         <div class="buttons">
-          <!-- Download CV CTA in Contact -->
+          <!-- Download Resume Button -->
           <a href="assets/Nayan_Deva_KV_Resume.pdf" download="Nayan_Deva_KV_Resume.pdf" class="btn btn-download-cv">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -1782,7 +2005,7 @@
             <span>Download Resume (PDF)</span>
           </a>
 
-          <a class="btn" href="https://www.linkedin.com/in/nayandeva/" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
+          <a class="btn" href="https://www.linkedin.com/in/nayan-deva/" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
           <a class="btn" href="https://github.com/nayandeva" target="_blank" rel="noopener">GitHub Profile ↗</a>
         </div>
       </div>
@@ -1793,21 +2016,21 @@
 <!-- Footer -->
 <footer class="container">
   <div>
-    <span>© 2026 Nayan Deva K V — Built for Data & Performance</span>
+    <span>© 2026 Nayan Deva K V — Engineered for Impact</span>
   </div>
   <div class="footer-links">
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
-    <a href="assets/Nayan_Deva_KV_Resume.pdf" download="Nayan_Deva_KV_Resume.pdf">CV (PDF)</a>
+    <a href="assets/Nayan_Deva_KV_Resume.pdf" download="Nayan_Deva_KV_Resume.pdf">Resume (PDF)</a>
     <a href="#">↑ Top</a>
   </div>
 </footer>
 
-<!-- -------------------------------------------------------------
-     JavaScript: Theme Switcher, 3D Tilt, Spotlight, Particle Canvas
--------------------------------------------------------------- -->
+<!-- =============================================================
+     JavaScript: Theme Switcher, 3D Tilt, Cursor Spotlight
+============================================================== -->
 <script>
-  // 1. Theme Switcher (Dark / Light with LocalStorage persistence)
+  // 1. Theme Switcher (Sunset Dark / Tuscan Light)
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
   const root = document.documentElement;
@@ -1824,8 +2047,8 @@
     themeIcon.textContent = newTheme === 'dark' ? '🌙' : '☀️';
   });
 
-  // 2. Creative Spotlight Effect following cursor on all .spotlight-card elements
-  const cards = document.querySelectorAll('.spotlight-card');
+  // 2. Cursor Spotlight on .prismatic-card elements
+  const cards = document.querySelectorAll('.prismatic-card');
   cards.forEach(card => {
     card.addEventListener('pointermove', (e) => {
       const rect = card.getBoundingClientRect();
@@ -1836,7 +2059,7 @@
     });
   });
 
-  // 3. 3D Tilt Effect on Hero Photo Card
+  // 3. 3D Tilt Interaction on Photo Card
   const tiltCard = document.getElementById('tilt-card');
   if (tiltCard) {
     tiltCard.addEventListener('mousemove', (e) => {
@@ -1856,76 +2079,15 @@
     });
   }
 
-  // 4. Hero Background Constellation Particle Canvas
-  const canvas = document.getElementById('hero-canvas');
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    let width, height;
-    let particles = [];
-    const particleCount = 38;
-
-    function resize() {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    }
-    window.addEventListener('resize', resize);
-    resize();
-
-    class Particle {
-      constructor() {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height;
-        this.vx = (Math.random() - 0.5) * 0.45;
-        this.vy = (Math.random() - 0.5) * 0.45;
-        this.radius = Math.random() * 2 + 1;
-      }
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        if (this.x < 0 || this.x > width) this.vx *= -1;
-        if (this.y < 0 || this.y > height) this.vy *= -1;
-      }
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = root.getAttribute('data-theme') === 'dark' ? 'rgba(16, 185, 129, 0.6)' : 'rgba(5, 150, 105, 0.4)';
-        ctx.fill();
-      }
-    }
-
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
-    }
-
-    function animate() {
-      ctx.clearRect(0, 0, width, height);
-
-      for (let i = 0; i < particles.length; i++) {
-        particles[i].update();
-        particles[i].draw();
-
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-
-          if (dist < 130) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            const alpha = (1 - dist / 130) * 0.22;
-            ctx.strokeStyle = root.getAttribute('data-theme') === 'dark'
-              ? `rgba(16, 185, 129, ${alpha})`
-              : `rgba(5, 150, 105, ${alpha})`;
-            ctx.lineWidth = 1;
-            ctx.stroke();
-          }
-        }
-      }
-      requestAnimationFrame(animate);
-    }
-    animate();
-  }
+  // 4. Subtle Interactive Parallax on Ambient Orbs
+  window.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX / window.innerWidth - 0.5;
+    const mouseY = e.clientY / window.innerHeight - 0.5;
+    const orb1 = document.querySelector('.orb-1');
+    const orb2 = document.querySelector('.orb-2');
+    if (orb1) orb1.style.transform = `translate(${mouseX * 40}px, ${mouseY * 40}px)`;
+    if (orb2) orb2.style.transform = `translate(${mouseX * -50}px, ${mouseY * -50}px)`;
+  });
 </script>
 
 </body>
