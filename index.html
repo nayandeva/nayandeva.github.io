@@ -311,7 +311,7 @@
     }
 
     /* =============================================================
-       Sophisticated Minimalist Hover Cards (Subtle & Elegant)
+       Spotlight Hover Cards
     ============================================================== */
     .prismatic-card {
       position: relative;
@@ -328,7 +328,6 @@
       z-index: 1;
     }
 
-    /* Very subtle cursor light sheen (barely-there physical depth) */
     .prismatic-card::before {
       content: "";
       position: absolute;
@@ -473,7 +472,6 @@
       border-color: var(--surface-hover-border);
     }
 
-    /* Refined Download CV CTA */
     .btn-download-cv {
       background: var(--primary-gradient);
       color: #ffffff !important;
@@ -487,7 +485,7 @@
     }
 
     /* =============================================================
-       Hero Photo 3D Tilt Card (Gentle & Balanced)
+       Hero Photo 3D Tilt Card
     ============================================================== */
     .hero-photo-wrap {
       display: flex;
@@ -682,7 +680,7 @@
     }
 
     /* =============================================================
-       Projects Section (Clean & Understated)
+       Projects Section
     ============================================================== */
     .projects-grid {
       display: grid;
@@ -784,7 +782,6 @@
       font-size: 1.2rem;
     }
 
-    /* Pollutant Chips */
     .pollutant-chips {
       display: flex;
       flex-wrap: wrap;
@@ -894,7 +891,7 @@
     }
 
     /* =============================================================
-       Skills Section (Tasteful & Balanced)
+       Skills Section (With Small Vector Logos)
     ============================================================== */
     .skills-grid {
       display: grid;
@@ -933,13 +930,24 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.8rem;
       font-weight: 600;
-      padding: 5px 11px;
+      padding: 6px 11px;
       background: var(--surface-solid);
       border: 1px solid var(--surface-border);
       border-radius: 8px;
       color: var(--text-muted);
       transition: all 0.2s ease;
       cursor: default;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .skill-icon {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      flex-shrink: 0;
+      display: inline-block;
     }
 
     .skill-badge:hover {
@@ -949,7 +957,7 @@
     }
 
     /* =============================================================
-       Training Section
+       Training Section (Company Plain Text, Certificate Hyperlinked)
     ============================================================== */
     .training-card {
       padding: 34px;
@@ -963,29 +971,33 @@
       align-items: baseline;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    .training-company-link {
+    /* Company Name is NOT a link */
+    .training-company {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.45rem;
       font-weight: 700;
       color: var(--text);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: color 0.2s ease;
+      margin-bottom: 4px;
     }
 
-    .training-company-link:hover {
-      color: var(--accent-coral);
-    }
-
-    .training-role {
+    /* Certificate Title is a hyperlink */
+    .training-cert-link {
       color: var(--accent-coral);
       font-weight: 650;
       font-size: 1.05rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
       margin-bottom: 16px;
+    }
+
+    .training-cert-link:hover {
+      gap: 9px;
+      text-decoration: underline;
     }
 
     .training-bullets {
@@ -1013,7 +1025,7 @@
     }
 
     /* =============================================================
-       Certificates Grid (with Refined Hyperlinks)
+       Certificates Grid (Company Plain Text, Certificate Hyperlinked)
     ============================================================== */
     .certificates-grid {
       display: grid;
@@ -1036,21 +1048,14 @@
       margin-bottom: 10px;
     }
 
-    .cert-company-link {
+    /* Company Name is plain text */
+    .cert-company {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.82rem;
       font-weight: 650;
-      color: var(--text-muted);
+      color: var(--text-dim);
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: color 0.2s ease;
-    }
-
-    .cert-company-link:hover {
-      color: var(--text);
     }
 
     .cert-date {
@@ -1060,12 +1065,26 @@
       font-weight: 600;
     }
 
+    /* Certificate Title is hyperlinked */
+    .cert-title-link {
+      display: block;
+      color: inherit;
+      transition: color 0.2s ease;
+      margin-bottom: 18px;
+    }
+
+    .cert-title-link:hover .cert-title {
+      color: var(--accent-coral);
+    }
+
     .cert-title {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.18rem;
       font-weight: 700;
       line-height: 1.4;
-      margin-bottom: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .cert-footer {
@@ -1076,7 +1095,7 @@
       border-top: 1px solid var(--line);
     }
 
-    /* Clean, Understated Verify Link Button */
+    /* Clean Verify Link Button */
     .cert-verify-link {
       display: inline-flex;
       align-items: center;
@@ -1622,101 +1641,182 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills Section (Each Component has a Vector Logo) -->
   <section id="skills">
     <div class="container">
       <div class="section-label">03 — Skills</div>
       <h2>Technical Arsenal.</h2>
 
       <div class="skills-grid">
+        <!-- Languages -->
         <div class="prismatic-card skill-card">
           <div class="skill-category-header">
             <span class="category-icon">💻</span>
             <h3>Languages</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-badge">Python</span>
-            <span class="skill-badge">Java</span>
-            <span class="skill-badge">C++</span>
-            <span class="skill-badge">C</span>
-            <span class="skill-badge">SQL</span>
+            <span class="skill-badge">
+              <img src="assets/icons/python.svg" class="skill-icon" alt="Python">
+              <span>Python</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/java.svg" class="skill-icon" alt="Java">
+              <span>Java</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/cplusplus.svg" class="skill-icon" alt="C++">
+              <span>C++</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/c.svg" class="skill-icon" alt="C">
+              <span>C</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/sql.svg" class="skill-icon" alt="SQL">
+              <span>SQL</span>
+            </span>
           </div>
         </div>
 
+        <!-- Tools & Platforms -->
         <div class="prismatic-card skill-card">
           <div class="skill-category-header">
             <span class="category-icon">📊</span>
             <h3>Tools & Platforms</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-badge">Tableau</span>
-            <span class="skill-badge">Power BI</span>
-            <span class="skill-badge">Excel</span>
-            <span class="skill-badge">MySQL</span>
-            <span class="skill-badge">Google Colab</span>
+            <span class="skill-badge">
+              <img src="assets/icons/tableau.svg" class="skill-icon" alt="Tableau">
+              <span>Tableau</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/powerbi.svg" class="skill-icon" alt="Power BI">
+              <span>Power BI</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/excel.svg" class="skill-icon" alt="Excel">
+              <span>Excel</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/mysql.svg" class="skill-icon" alt="MySQL">
+              <span>MySQL</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/colab.svg" class="skill-icon" alt="Google Colab">
+              <span>Google Colab</span>
+            </span>
           </div>
         </div>
 
+        <!-- Data Science & ML -->
         <div class="prismatic-card skill-card">
           <div class="skill-category-header">
             <span class="category-icon">🧠</span>
             <h3>Data Science & ML</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-badge">Pandas</span>
-            <span class="skill-badge">NumPy</span>
-            <span class="skill-badge">Matplotlib</span>
-            <span class="skill-badge">Seaborn</span>
-            <span class="skill-badge">Scikit-learn</span>
+            <span class="skill-badge">
+              <img src="assets/icons/pandas.svg" class="skill-icon" alt="Pandas">
+              <span>Pandas</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/numpy.svg" class="skill-icon" alt="NumPy">
+              <span>NumPy</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/matplotlib.svg" class="skill-icon" alt="Matplotlib">
+              <span>Matplotlib</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/seaborn.svg" class="skill-icon" alt="Seaborn">
+              <span>Seaborn</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/scikitlearn.svg" class="skill-icon" alt="Scikit-learn">
+              <span>Scikit-learn</span>
+            </span>
           </div>
         </div>
 
+        <!-- DevOps & Cloud -->
         <div class="prismatic-card skill-card">
           <div class="skill-category-header">
             <span class="category-icon">☁️</span>
             <h3>DevOps & Cloud</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-badge">AWS EC2</span>
-            <span class="skill-badge">ALB Load Balancer</span>
-            <span class="skill-badge">Auto Scaling</span>
-            <span class="skill-badge">CloudWatch</span>
-            <span class="skill-badge">Linux</span>
+            <span class="skill-badge">
+              <img src="assets/icons/awsec2.svg" class="skill-icon" alt="AWS EC2">
+              <span>AWS EC2</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/alb.svg" class="skill-icon" alt="ALB Load Balancer">
+              <span>ALB Load Balancer</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/autoscaling.svg" class="skill-icon" alt="Auto Scaling">
+              <span>Auto Scaling</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/cloudwatch.svg" class="skill-icon" alt="CloudWatch">
+              <span>CloudWatch</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/linux.svg" class="skill-icon" alt="Linux">
+              <span>Linux</span>
+            </span>
           </div>
         </div>
 
+        <!-- Software & Systems -->
         <div class="prismatic-card skill-card">
           <div class="skill-category-header">
             <span class="category-icon">⚙️</span>
             <h3>Software & Systems</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-badge">Tkinter</span>
-            <span class="skill-badge">Pillow</span>
-            <span class="skill-badge">Node.js</span>
-            <span class="skill-badge">POSIX APIs</span>
-            <span class="skill-badge">Git & GitHub</span>
+            <span class="skill-badge">
+              <img src="assets/icons/tkinter.svg" class="skill-icon" alt="Tkinter">
+              <span>Tkinter</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/pillow.svg" class="skill-icon" alt="Pillow">
+              <span>Pillow</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/nodejs.svg" class="skill-icon" alt="Node.js">
+              <span>Node.js</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/posix.svg" class="skill-icon" alt="POSIX APIs">
+              <span>POSIX APIs</span>
+            </span>
+            <span class="skill-badge">
+              <img src="assets/icons/git.svg" class="skill-icon" alt="Git & GitHub">
+              <span>Git & GitHub</span>
+            </span>
           </div>
         </div>
 
+        <!-- Professional Strengths -->
         <div class="prismatic-card skill-card">
           <div class="skill-category-header">
             <span class="category-icon">🤝</span>
             <h3>Professional Strengths</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-badge">Problem-Solving</span>
-            <span class="skill-badge">Analytical Thinking</span>
-            <span class="skill-badge">Continuous Learning</span>
-            <span class="skill-badge">Teamwork</span>
-            <span class="skill-badge">Communication</span>
+            <span class="skill-badge"><span>⚡</span><span>Problem-Solving</span></span>
+            <span class="skill-badge"><span>🔍</span><span>Analytical Thinking</span></span>
+            <span class="skill-badge"><span>📚</span><span>Continuous Learning</span></span>
+            <span class="skill-badge"><span>👥</span><span>Teamwork</span></span>
+            <span class="skill-badge"><span>💬</span><span>Communication</span></span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Hands-On Training Section -->
+  <!-- Hands-On Training Section (Company Plain Text, Certificate Hyperlinked) -->
   <section id="training">
     <div class="container">
       <div class="section-label">04 — Training</div>
@@ -1725,11 +1825,13 @@
       <div class="prismatic-card training-card">
         <div class="training-header">
           <div>
-            <a href="https://www.eduniketanpvtltd.com/verify/certificates/preview?id=6774-2345-8972-6539" target="_blank" rel="noopener" class="training-company-link" title="Verify Eduniketan Training">
-              <span>Eduniketan Private Limited</span>
-              <span style="font-size: 0.95rem; color: var(--accent-coral);">↗</span>
+            <!-- Company name is plain text -->
+            <div class="training-company">Eduniketan Private Limited</div>
+            <!-- Certificate is hyperlinked -->
+            <a href="https://www.eduniketanpvtltd.com/verify/certificates/preview?id=6774-2345-8972-6539" target="_blank" rel="noopener" class="training-cert-link" title="Verify DevOps & Cloud Engineering Certificate">
+              <span>DevOps & Cloud Engineering Certificate</span>
+              <span style="font-size: 0.9rem;">↗</span>
             </a>
-            <div class="training-role">DevOps & Cloud Engineering Training</div>
           </div>
           <div class="project-date">Jun’ 26 – Jul’ 26</div>
         </div>
@@ -1749,18 +1851,19 @@
           </li>
         </ul>
 
+        <!-- Direct Certificate Verification Action -->
         <a href="https://www.eduniketanpvtltd.com/verify/certificates/preview?id=6774-2345-8972-6539" target="_blank" rel="noopener" class="cert-verify-link">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
             <polyline points="22 4 12 14.01 9 11.01"></polyline>
           </svg>
-          <span>Verify Training Certificate ↗</span>
+          <span>Verify Certificate ↗</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Certificates Section (with Clean, Refined Hyperlinks) -->
+  <!-- Certificates Section (Company Plain Text, Certificate Hyperlinked) -->
   <section id="certificates">
     <div class="container">
       <div class="section-label">05 — Certifications</div>
@@ -1771,13 +1874,14 @@
         <div class="prismatic-card cert-card">
           <div>
             <div class="cert-top">
-              <a href="https://docs.google.com/document/d/1T6_JWEeq9GcBZyZ3f7MhlO1uUDgqygxnK9Noh0s5chQ/edit?usp=sharing" target="_blank" rel="noopener" class="cert-company-link" title="Infosys Certificate">
-                <span>Infosys</span>
-                <span>↗</span>
-              </a>
+              <!-- Company name is plain text -->
+              <span class="cert-company">Infosys</span>
               <span class="cert-date">Aug’ 26</span>
             </div>
-            <h4 class="cert-title">Database Management System Part 1</h4>
+            <!-- Certificate Title is hyperlinked -->
+            <a href="https://docs.google.com/document/d/1T6_JWEeq9GcBZyZ3f7MhlO1uUDgqygxnK9Noh0s5chQ/edit?usp=sharing" target="_blank" rel="noopener" class="cert-title-link">
+              <h4 class="cert-title">Database Management System Part 1 ↗</h4>
+            </a>
           </div>
           <div class="cert-footer">
             <a href="https://docs.google.com/document/d/1T6_JWEeq9GcBZyZ3f7MhlO1uUDgqygxnK9Noh0s5chQ/edit?usp=sharing" target="_blank" rel="noopener" class="cert-verify-link">
@@ -1791,13 +1895,14 @@
         <div class="prismatic-card cert-card">
           <div>
             <div class="cert-top">
-              <a href="https://upgradcampus.certificate.givemycertificate.com/c/6a6c0169-886a-46b0-b122-8553cab00855" target="_blank" rel="noopener" class="cert-company-link" title="UpGrad Campus Certificate">
-                <span>UpGrad Campus</span>
-                <span>↗</span>
-              </a>
+              <!-- Company name is plain text -->
+              <span class="cert-company">UpGrad Campus</span>
               <span class="cert-date">May’ 26</span>
             </div>
-            <h4 class="cert-title">Python Project</h4>
+            <!-- Certificate Title is hyperlinked -->
+            <a href="https://upgradcampus.certificate.givemycertificate.com/c/6a6c0169-886a-46b0-b122-8553cab00855" target="_blank" rel="noopener" class="cert-title-link">
+              <h4 class="cert-title">Python Project ↗</h4>
+            </a>
           </div>
           <div class="cert-footer">
             <a href="https://upgradcampus.certificate.givemycertificate.com/c/6a6c0169-886a-46b0-b122-8553cab00855" target="_blank" rel="noopener" class="cert-verify-link">
@@ -1811,13 +1916,14 @@
         <div class="prismatic-card cert-card">
           <div>
             <div class="cert-top">
-              <a href="https://upgradcampus.certificate.givemycertificate.com/c/c942bf87-db53-44e9-b434-296aeedb1b7f" target="_blank" rel="noopener" class="cert-company-link" title="UpGrad Campus Certificate">
-                <span>UpGrad Campus</span>
-                <span>↗</span>
-              </a>
+              <!-- Company name is plain text -->
+              <span class="cert-company">UpGrad Campus</span>
               <span class="cert-date">May’ 26</span>
             </div>
-            <h4 class="cert-title">Design and Analysis of Algorithm</h4>
+            <!-- Certificate Title is hyperlinked -->
+            <a href="https://upgradcampus.certificate.givemycertificate.com/c/c942bf87-db53-44e9-b434-296aeedb1b7f" target="_blank" rel="noopener" class="cert-title-link">
+              <h4 class="cert-title">Design and Analysis of Algorithm ↗</h4>
+            </a>
           </div>
           <div class="cert-footer">
             <a href="https://upgradcampus.certificate.givemycertificate.com/c/c942bf87-db53-44e9-b434-296aeedb1b7f" target="_blank" rel="noopener" class="cert-verify-link">
@@ -1831,13 +1937,14 @@
         <div class="prismatic-card cert-card">
           <div>
             <div class="cert-top">
-              <a href="https://upgradcampus.certificate.givemycertificate.com/c/3c6fded6-ca33-4103-836f-b33246cc6706" target="_blank" rel="noopener" class="cert-company-link" title="UpGrad Campus Certificate">
-                <span>UpGrad Campus</span>
-                <span>↗</span>
-              </a>
+              <!-- Company name is plain text -->
+              <span class="cert-company">UpGrad Campus</span>
               <span class="cert-date">May’ 26</span>
             </div>
-            <h4 class="cert-title">Data Structure</h4>
+            <!-- Certificate Title is hyperlinked -->
+            <a href="https://upgradcampus.certificate.givemycertificate.com/c/3c6fded6-ca33-4103-836f-b33246cc6706" target="_blank" rel="noopener" class="cert-title-link">
+              <h4 class="cert-title">Data Structure ↗</h4>
+            </a>
           </div>
           <div class="cert-footer">
             <a href="https://upgradcampus.certificate.givemycertificate.com/c/3c6fded6-ca33-4103-836f-b33246cc6706" target="_blank" rel="noopener" class="cert-verify-link">
@@ -1851,13 +1958,14 @@
         <div class="prismatic-card cert-card">
           <div>
             <div class="cert-top">
-              <a href="https://www.coursera.org/account/accomplishments/verify/Z7RA3JW0I8AM" target="_blank" rel="noopener" class="cert-company-link" title="Coursera Certificate">
-                <span>Coursera</span>
-                <span>↗</span>
-              </a>
+              <!-- Company name is plain text -->
+              <span class="cert-company">Coursera</span>
               <span class="cert-date">Oct’ 25</span>
             </div>
-            <h4 class="cert-title">Digital Systems: From Logic Gates to Processors</h4>
+            <!-- Certificate Title is hyperlinked -->
+            <a href="https://www.coursera.org/account/accomplishments/verify/Z7RA3JW0I8AM" target="_blank" rel="noopener" class="cert-title-link">
+              <h4 class="cert-title">Digital Systems: Logic Gates to Processors ↗</h4>
+            </a>
           </div>
           <div class="cert-footer">
             <a href="https://www.coursera.org/account/accomplishments/verify/Z7RA3JW0I8AM" target="_blank" rel="noopener" class="cert-verify-link">
@@ -1991,7 +2099,7 @@
     themeIcon.textContent = newTheme === 'dark' ? '🌙' : '☀️';
   });
 
-  // 2. Subtle Cursor Light Sheen on Cards (Barely-there physical feel)
+  // 2. Subtle Cursor Light Sheen on Cards
   const cards = document.querySelectorAll('.prismatic-card');
   cards.forEach(card => {
     card.addEventListener('pointermove', (e) => {
@@ -2003,7 +2111,7 @@
     });
   });
 
-  // 3. Gentle 3D Tilt on Photo Card (Subtle & smooth)
+  // 3. Gentle 3D Tilt on Photo Card
   const tiltCard = document.getElementById('tilt-card');
   if (tiltCard) {
     tiltCard.addEventListener('mousemove', (e) => {
@@ -2023,7 +2131,7 @@
     });
   }
 
-  // 4. Very Gentle Parallax on Ambient Orbs
+  // 4. Parallax on Ambient Orbs
   window.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX / window.innerWidth - 0.5;
     const mouseY = e.clientY / window.innerHeight - 0.5;
